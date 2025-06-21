@@ -1,0 +1,1 @@
+|freq(x) – freq(y)| ≤ k.
