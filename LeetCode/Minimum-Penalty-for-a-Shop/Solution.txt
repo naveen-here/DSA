@@ -1,0 +1,14 @@
+1class Solution:
+2    def bestClosingTime(self, customers: str) -> int:
+3        bestTime = 0
+4        minPenalty = 0
+5        prefix = 0
+6        
+7        for i in range(len(customers)):
+8            prefix += -1 if customers[i] == 'Y' else 1
+9            
+10            if prefix < minPenalty:
+11                bestTime = i + 1
+12                minPenalty = prefix
+13        
+14        return bestTime
